@@ -1,0 +1,29 @@
+{
+  "name": "webpack-js-library",
+  "version": "0.0.1",
+  "description": "Template for qick starting with JS library creation",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "serve": "webpack serve --config ./webpack.config.js --mode development --open",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@nemanya-m:nemanya-m/webpack-js-library-template.git"
+  },
+  "keywords": [
+    "javascript",
+    "webpack",
+    "browser",
+    "es6"
+  ],
+  "author": "Nemanja Markovic",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
