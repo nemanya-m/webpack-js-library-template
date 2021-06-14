@@ -15,5 +15,12 @@ module.exports = {
         ],
       },
     ]
+  },
+  devServer: {
+    // If I want to serve app to be accessible over LAN netowrk
+    // host: '0.0.0.0',
+    open: true,
+    // If I want to open specific page on startup
+    // openPage: 'http://localhost:8080'
   }
 };
