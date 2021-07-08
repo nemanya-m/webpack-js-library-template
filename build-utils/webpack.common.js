@@ -28,7 +28,8 @@ module.exports ={
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Hello Webpack bundled JavaScript Project',
+      title: 'Dragg&Drop',
+      filename: 'index.html',
       template: path.resolve(__dirname, '..', './src/index.html'),
     }),
     new ESLintPlugin({

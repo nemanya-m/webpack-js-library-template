@@ -1,7 +1,60 @@
-h1 {
-  color: red;
-
-  &:hover {
-    color: blue;
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  .drop-targets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    .box {
+      height: 150px;
+      width: 150px;
+      border: solid 3px #ccc;
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &.drag-over {
+        border: dashed 3px red;
+      }
+      & .item {
+        height: 75px;
+        width: 75px;
+        background-color: #F0DB4F;
+        &.hide {
+          display: none;
+        }
+      }
+    }
   }
+}
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins";
+    font-size: 18px;
+}
+
+#draggable {
+    padding: 8px;
+    text-align: center;
+    background: white;
+}
+
+.dropzone {
+    padding: 24px 8px;
+    background: blueviolet;
+    margin-bottom: 8px;
+    transition: all 0.25s ease-out;
 }
