@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports ={
@@ -12,7 +13,7 @@ module.exports ={
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
@@ -24,12 +25,28 @@ module.exports ={
           }
         }
       },
+      {
+        // If you need to include other file extensions for images, make sure to include them here as well
+        test: /\.(png|jpg|gif)$/i,
+        type: 'asset/resource'
+      }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Hello Webpack bundled JavaScript Project',
+      title: 'Webpack static site builder',
       template: path.resolve(__dirname, '..', './src/index.html'),
+    }),
+    new StylelintPlugin({
+      // configFile: '../.stylelintrc',
+      configFile: path.resolve(__dirname, '..', '.stylelintrc'),
+      context: 'src',
+      failOnError: false,
+      quiet: false,
+      emitErrors: true, // by default this is to true to check the CSS lint errors
+      files: path.join('src', '**/*.s?(a|c)ss'),
+      fix: true,
+
     }),
     new ESLintPlugin({
       extensions: ["js", "jsx", "ts", "tsx"],

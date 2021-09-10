@@ -1,7 +1,52 @@
-h1 {
-  color: red;
+@charset 'utf-8';
 
-  &:hover {
-    color: blue;
+// 1. Abstracts
+@import 'abstracts/abstract-dir';
+
+// 2. Base
+@import 'base/base-dir';
+
+// 3. Components
+@import 'components/components-dir';
+
+// 4. Layout
+@import 'layout/layouts-dir';
+
+// 5. Pages
+@import 'pages/pages-dir';
+
+// 6. Themes
+@import 'themes/themes-dir';
+
+// 7. Vendor
+@import 'vendors/vendor-dir';
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+#intro-section {
+  background: url('../img/wepack.png') ;
+  /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.intro-text {
+  position: relative;
+  top: 50px;
+  margin-left: 50%;
+  h1 {
+    color: #000;
+    font-size: 2rem;
+    margin: 0;
+  }
+  p {
+    color: #000;
+    font-size: 2rem;
   }
 }
