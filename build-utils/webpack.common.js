@@ -4,7 +4,7 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports ={
-  entry: path.resolve(__dirname, '..', './src/index.js'),
+  entry: path.resolve(__dirname, '..', './src/js/index.js'),
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, '..', './dist'),
